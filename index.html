@@ -218,6 +218,7 @@
 
         <div class="max-w-[1170px] w-[90%] mx-auto mt-24 bg-white rounded-3xl p-5">
             <div class="grid grid-cols-12">
+
                 <div class="col-span-7 border-r-2 border-dashed py-1 px-3">
                     <div class="flex justify-between items-center pb-5 mb-8 border-b-2 border-dashed">
                         <p class="text-xl font-bold">Select Your Seat</p>
@@ -231,6 +232,12 @@
                             <img src="images/seat-green-filled.png" alt="">
                             Selected
                         </p>
+                    </div>
+
+                    <div class="flex justify-end mb-6">
+                        <button class="btn  px-6">
+                            <img src="images/wheel.png" alt="">
+                        </button>
                     </div>
 
                     <div class="grid grid-cols-9 gap-12">
@@ -298,9 +305,93 @@
 
 
                 <div class="col-span-5 border-dashed py-1 px-3">
-                    <div class="flex justify-between items-center pb-5 mb-8 border-b-2 border-dashed">
+
+                    <div class="flex justify-between items-center pb-5 mb-3 border-b-2 border-dashed">
                         <p class="text-xl font-bold">Select Your Seat</p>
                     </div>
+
+                    <div class="bg-green-50 p-8 rounded-xl">
+                        <div class="flex justify-between items-center pb-5 mb-8 border-b-2 border-dashed">
+                            <p class="flex justify-between items-center text-lg font-bold">
+                                Seat <span class="bg-green-500 text-white text-lg font-bold px-2 rounded-lg">0</span>
+                            </p>
+                            <p class="text-lg font-bold">
+                                Class
+                            </p>
+                            <p class="text-lg font-bold">
+                                Price
+                            </p>
+                        </div>
+
+                        <div class="pb-5 mb-1 border-b-2 border-solid">
+                            <ul class="flex justify-between items-center mb-1">
+                                <li class="text-xl font-medium text-slate-400">
+                                    c2
+                                </li>
+                                <li class=" font-medium text-slate-400">
+                                    Economy
+                                </li>
+                                <li class="font-medium text-slate-400">
+                                    550
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="flex justify-between items-center">
+                            <p class="text-lg font-bold">
+                                Total Price
+                            </p>
+                            <p class="flex gap-1 justify-between items-center text-lg font-bold">
+                                BDT <span class="text-2xl font-semibold">1106</span>
+                            </p>
+                        </div>
+                        <div>
+                            <label class="input input-bordered flex items-center">
+                                <input type="text" class="grow" placeholder="Have any coupon?" />
+                                <button class="badge text-white p-4 -ml-7 bg-[#1DD100]">Apply</button>
+                            </label>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <p class="text-lg font-bold">
+                                Grand Total
+                            </p>
+                            <p class="flex gap-1 justify-between items-center text-lg font-bold">
+                                BDT <span class="text-2xl font-semibold">1106</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="form-control w-full max-w-xs">
+                            <div class="label">
+                                <span class="label-text text-lg font-semibold">Passenger Name*</span>
+                            </div>
+                            <input type="text" placeholder="Enter your name"
+                                class="input input-bordered w-full max-w-xs" />
+                        </label>
+                        <label class="form-control w-full max-w-xs">
+                            <div class="label">
+                                <span class="label-text text-lg font-semibold">Phone Number*</span>
+                            </div>
+                            <input type="number" placeholder="Enter your phone number"
+                                class="input input-bordered w-full max-w-xs" />
+                        </label>
+                        <label class="form-control w-full max-w-xs">
+                            <div class="label">
+                                <span class="label-text text-lg font-semibold">Email ID</span>
+                            </div>
+                            <input type="email" placeholder="Enter Your email id"
+                                class="input input-bordered w-full max-w-xs" />
+                        </label>
+
+                        <button
+                            class="btn btn-block my-3 text-white text-lg font-semibold bg-[#1DD100] hover:bg-[#1DD100]">Next</button>
+                        <div class="flex justify-between">
+                            <a class="underline" href="#">Terms and Conditions</a>
+                            <a class="underline" href="#">Cancellation Policy</a>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
