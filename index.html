@@ -68,7 +68,6 @@
                     <button class="btn btn-success text-green-400 bg-green-100">Bus <img src="images/bus-icon.png"
                             class="w-6">
                     </button>
-
                 </div>
             </div>
         </nav>
@@ -84,7 +83,9 @@
                     <p class="mb-5">Embark on a seamless and comfortable experience as you traverse through picturesque
                         landscapes and vibrant cities. Our
                         fleet of modern, air-conditioned buses ensures a relaxing ride.</p>
-                    <button id="scrolBtn" class="btn bg-lime-400 font-bold border-none">Buy Tickets</button>
+                    <a href="#scrol">
+                        <button class="btn bg-lime-400 font-bold border-none">Buy Tickets</button>
+                    </a>
                 </div>
             </div>
             <div class="flex gap-5 absolute -bottom-14">
@@ -183,7 +184,7 @@
                         <div>
                             <button class="btn btn-success text-green-400 bg-green-100 border-none"> <img
                                     src="images/seat-green.png" class="w-6">
-                                <span>40</span> Seats left
+                                <span id="totalSeat">40</span> Seats left
                             </button>
                         </div>
                     </div>
@@ -254,49 +255,49 @@
                             <span>J</span>
                         </div>
                         <div class="grid col-span-4 grid-cols-2 gap-5">
-                            <kbd id="sit" class="kbd">A1</kbd>
-                            <kbd id="sit" class="kbd">A2</kbd>
-                            <kbd id="sit" class="kbd">B1</kbd>
-                            <kbd id="sit" class="kbd">B2</kbd>
-                            <kbd id="sit" class="kbd">C1</kbd>
-                            <kbd id="sit" class="kbd">C2</kbd>
-                            <kbd id="sit" class="kbd">D1</kbd>
-                            <kbd id="sit" class="kbd">D2</kbd>
-                            <kbd id="sit" class="kbd">E1</kbd>
-                            <kbd id="sit" class="kbd">E2</kbd>
-                            <kbd id="sit" class="kbd">F1</kbd>
-                            <kbd id="sit" class="kbd">F2</kbd>
-                            <kbd id="sit" class="kbd">G1</kbd>
-                            <kbd id="sit" class="kbd">G2</kbd>
-                            <kbd id="sit" class="kbd">H1</kbd>
-                            <kbd id="sit" class="kbd">H2</kbd>
-                            <kbd id="sit" class="kbd">I1</kbd>
-                            <kbd id="sit" class="kbd">I2</kbd>
-                            <kbd id="sit" class="kbd">J1</kbd>
-                            <kbd id="sit" class="kbd">J2</kbd>
+                            <kbd id="seat" class="kbd">A1</kbd>
+                            <kbd id="seat" class="kbd">A2</kbd>
+                            <kbd id="seat" class="kbd">B1</kbd>
+                            <kbd id="seat" class="kbd">B2</kbd>
+                            <kbd id="seat" class="kbd">C1</kbd>
+                            <kbd id="seat" class="kbd">C2</kbd>
+                            <kbd id="seat" class="kbd">D1</kbd>
+                            <kbd id="seat" class="kbd">D2</kbd>
+                            <kbd id="seat" class="kbd">E1</kbd>
+                            <kbd id="seat" class="kbd">E2</kbd>
+                            <kbd id="seat" class="kbd">F1</kbd>
+                            <kbd id="seat" class="kbd">F2</kbd>
+                            <kbd id="seat" class="kbd">G1</kbd>
+                            <kbd id="seat" class="kbd">G2</kbd>
+                            <kbd id="seat" class="kbd">H1</kbd>
+                            <kbd id="seat" class="kbd">H2</kbd>
+                            <kbd id="seat" class="kbd">I1</kbd>
+                            <kbd id="seat" class="kbd">I2</kbd>
+                            <kbd id="seat" class="kbd">J1</kbd>
+                            <kbd id="seat" class="kbd">J2</kbd>
                         </div>
 
                         <div class="grid col-span-4 grid-cols-2 gap-5">
-                            <kbd id="sit" class="kbd">A3</kbd>
-                            <kbd id="sit" class="kbd">A4</kbd>
-                            <kbd id="sit" class="kbd">B3</kbd>
-                            <kbd id="sit" class="kbd">B4</kbd>
-                            <kbd id="sit" class="kbd">C3</kbd>
-                            <kbd id="sit" class="kbd">C4</kbd>
-                            <kbd id="sit" class="kbd">D3</kbd>
-                            <kbd id="sit" class="kbd">D4</kbd>
-                            <kbd id="sit" class="kbd">E3</kbd>
-                            <kbd id="sit" class="kbd">E4</kbd>
-                            <kbd id="sit" class="kbd">F3</kbd>
-                            <kbd id="sit" class="kbd">F4</kbd>
-                            <kbd id="sit" class="kbd">G3</kbd>
-                            <kbd id="sit" class="kbd">G4</kbd>
-                            <kbd id="sit" class="kbd">H3</kbd>
-                            <kbd id="sit" class="kbd">H4</kbd>
-                            <kbd id="sit" class="kbd">I3</kbd>
-                            <kbd id="sit" class="kbd">I4</kbd>
-                            <kbd id="sit" class="kbd">J3</kbd>
-                            <kbd id="sit" class="kbd">J4</kbd>
+                            <kbd id="seat" class="kbd">A3</kbd>
+                            <kbd id="seat" class="kbd">A4</kbd>
+                            <kbd id="seat" class="kbd">B3</kbd>
+                            <kbd id="seat" class="kbd">B4</kbd>
+                            <kbd id="seat" class="kbd">C3</kbd>
+                            <kbd id="seat" class="kbd">C4</kbd>
+                            <kbd id="seat" class="kbd">D3</kbd>
+                            <kbd id="seat" class="kbd">D4</kbd>
+                            <kbd id="seat" class="kbd">E3</kbd>
+                            <kbd id="seat" class="kbd">E4</kbd>
+                            <kbd id="seat" class="kbd">F3</kbd>
+                            <kbd id="seat" class="kbd">F4</kbd>
+                            <kbd id="seat" class="kbd">G3</kbd>
+                            <kbd id="seat" class="kbd">G4</kbd>
+                            <kbd id="seat" class="kbd">H3</kbd>
+                            <kbd id="seat" class="kbd">H4</kbd>
+                            <kbd id="seat" class="kbd">I3</kbd>
+                            <kbd id="seat" class="kbd">I4</kbd>
+                            <kbd id="seat" class="kbd">J3</kbd>
+                            <kbd id="seat" class="kbd">J4</kbd>
                         </div>
 
                     </div>
@@ -313,7 +314,8 @@
                     <div class="bg-green-50 p-8 rounded-xl">
                         <div class="flex justify-between items-center pb-5 mb-8 border-b-2 border-dashed">
                             <p class="flex justify-between items-center text-lg font-bold">
-                                Seat <span class="bg-green-500 text-white text-lg font-bold px-2 rounded-lg">0</span>
+                                Seat <span id="seatCount"
+                                    class="bg-green-500 text-white text-lg font-bold px-2 rounded-lg">0</span>
                             </p>
                             <p class="text-lg font-bold">
                                 Class
@@ -395,10 +397,7 @@
                 </div>
             </div>
         </div>
-
     </section>
-
-
 
 
     <script src="js/app.js"></script>
