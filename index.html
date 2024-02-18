@@ -169,6 +169,8 @@
                 comfortable experience as you traverse through picturesque landscapes and vibrant cities.Our fleet of
                 modern, air-conditioned buses ensures a relaxing ride.
             </p>
+
+
             <div class="grid grid-cols-12 justify-center items-center bg-white rounded-3xl px-5">
                 <div class="col-span-9">
 
@@ -325,18 +327,8 @@
                             </p>
                         </div>
 
-                        <div class="pb-5 mb-1 border-b-2 border-solid">
-                            <ul class="flex justify-between items-center mb-1">
-                                <li class="text-xl font-medium text-slate-400">
-                                    c2
-                                </li>
-                                <li class=" font-medium text-slate-400">
-                                    Economy
-                                </li>
-                                <li class="font-medium text-slate-400">
-                                    550
-                                </li>
-                            </ul>
+                        <div id="ticketList" class="pb-5 mb-1 border-b-2 border-solid">
+
                         </div>
 
                         <div class="flex justify-between items-center">
@@ -344,13 +336,15 @@
                                 Total Price
                             </p>
                             <p class="flex gap-1 justify-between items-center text-lg font-bold">
-                                BDT <span class="text-2xl font-semibold">1106</span>
+                                BDT <span id="totalPrice" class="text-2xl font-semibold">00.00</span>
                             </p>
                         </div>
                         <div>
                             <label class="input input-bordered flex items-center">
-                                <input type="text" class="grow" placeholder="Have any coupon?" />
-                                <button class="badge text-white p-4 -ml-7 bg-[#1DD100]">Apply</button>
+                                <input id="couponInput" type="text" class="grow" placeholder="Have any coupon?"
+                                    disabled />
+                                <button id="couponBtn" class="badge text-white p-4 -ml-7 bg-[#1DD100]"
+                                    disabled>Apply</button>
                             </label>
                         </div>
                         <div class="flex justify-between items-center">
@@ -358,7 +352,7 @@
                                 Grand Total
                             </p>
                             <p class="flex gap-1 justify-between items-center text-lg font-bold">
-                                BDT <span class="text-2xl font-semibold">1106</span>
+                                BDT <span id="grandPrice" class="text-2xl font-semibold">00.00</span>
                             </p>
                         </div>
                     </div>
