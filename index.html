@@ -340,13 +340,15 @@
                             </p>
                         </div>
 
-                        <div class="mb-1 border-b-2 border-solid flex justify-between items-center">
-                            <p class="text-lg font-bold">
-                                discount Price
-                            </p>
-                            <p class="flex gap-1 justify-between items-center text-lg font-bold">
-                                BDT <span id="discountValue" class="text-2xl font-semibold">00.00</span>
-                            </p>
+                        <div id="discountDiv" class="hidden">
+                            <div class="mb-1 border-b-2 border-solid flex justify-between items-center">
+                                <p class="text-lg font-bold">
+                                    discount Price
+                                </p>
+                                <p class="flex gap-1 justify-between items-center text-lg font-bold">
+                                    BDT <span id="discountValue" class="text-2xl font-semibold">00.00</span>
+                                </p>
+                            </div>
                         </div>
 
                         <div id="couponDiv">
@@ -356,7 +358,10 @@
                                 <button id="couponBtn" class="badge text-white p-4 -ml-7 bg-[#1DD100]"
                                     disabled>Apply</button>
                             </label>
+                            <p id="invalid" class="hidden text-red-600">invalid coupon !!!</p>
                         </div>
+
+
 
                         <div class="flex justify-between items-center">
                             <p class="text-lg font-bold">

@@ -24,6 +24,13 @@ function off15Percent(value) {
     return [price, discount];
 }
 
+function off20Percent(value) {
+    let number = parseInt(value);
+    let discount = (number * 20) / 100;
+    let price = number - discount;
+    return [price, discount];
+}
+
 
 
 
@@ -31,10 +38,11 @@ for (let seat of seats) {
     var clickValue = [];
     seat.addEventListener("click", function (e) {
         var btnValue = e.target.innerText;
+        const arrayValue = clickValue.length;
 
         if (clickValue.includes(btnValue)) {
             alert(`THE ${btnValue} SEATS IS ALREADY YOU BOOKING`);
-        } else if (clickValue.length < 4) {
+        } else if (arrayValue <= 3) {
             clickValue.push(btnValue);
             e.target.classList.add("bg-[#1DD100]");
             increment("seatCount");
@@ -71,14 +79,18 @@ for (let seat of seats) {
                 var totalPrice = document.getElementById("totalPrice");
                 totalPrice.innerText = total_price;
                 grandPrice.innerText = total_price;
-                if (clickValue.length === 4) {
+
+                if (arrayValue === 3) {
                     const couponInput = document.getElementById("couponInput");
                     const couponBtn = document.getElementById("couponBtn");
                     const discountValue = document.getElementById("discountValue");
                     const couponDiv = document.getElementById("couponDiv");
+                    const discountDiv = document.getElementById("discountDiv");
+                    const invalid = document.getElementById("invalid");
 
                     couponInput.removeAttribute("disabled");
                     couponBtn.removeAttribute("disabled");
+                    // console.log(couponBtn);
 
                     couponBtn.addEventListener("click", function () {
                         let inputValue = couponInput.value;
@@ -86,10 +98,17 @@ for (let seat of seats) {
                             let discountPrice = off15Percent(total_price);
                             grandPrice.innerText = discountPrice[0];
                             discountValue.innerText = discountPrice[1];
-                            couponDiv.classList.add("hidden")
-                            console.log(discountPrice)
+                            couponDiv.classList.add("hidden");
+                            discountDiv.classList.remove("hidden");
+
+                        } else if (inputValue === "Couple 20") {
+                            let discountPrice = off20Percent(total_price);
+                            grandPrice.innerText = discountPrice[0];
+                            discountValue.innerText = discountPrice[1];
+                            couponDiv.classList.add("hidden");
+                            discountDiv.classList.remove("hidden");
                         } else {
-                            console.log("hi")
+                            invalid.classList.remove("hidden");
                         }
                     })
                 };
