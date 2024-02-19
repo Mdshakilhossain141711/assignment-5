@@ -87,7 +87,7 @@ for (let seat of seats) {
                 totalPrice.innerText = total_price;
                 grandPrice.innerText = total_price;
 
-                if (arrayValue === 3) {
+                if (arrayValue === 1) {
                     const couponInput = document.getElementById("couponInput");
                     const couponBtn = document.getElementById("couponBtn");
                     const discountValue = document.getElementById("discountValue");
@@ -140,6 +140,7 @@ function nextBtn() {
     const numberInput = document.getElementById("numberInput");
     const nextBtn = document.getElementById("nextBtn");
     const success = document.getElementById("success");
+    const work = document.getElementById("work");
     const seatCount = document.getElementById("seatCount").innerText;
     let inputValue = numberInput.value.length;
 
@@ -158,6 +159,12 @@ function nextBtn() {
 
     nextBtn.addEventListener("click", function () {
         success.classList.remove("hidden");
+        work.classList.add("hidden");
+    });
+    success.addEventListener("click", function () {
+        work.classList.remove("hidden");
+        success.classList.add("hidden");
+        location.reload();
     })
 };
 
