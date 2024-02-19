@@ -339,7 +339,17 @@
                                 BDT <span id="totalPrice" class="text-2xl font-semibold">00.00</span>
                             </p>
                         </div>
-                        <div>
+
+                        <div class="mb-1 border-b-2 border-solid flex justify-between items-center">
+                            <p class="text-lg font-bold">
+                                discount Price
+                            </p>
+                            <p class="flex gap-1 justify-between items-center text-lg font-bold">
+                                BDT <span id="discountValue" class="text-2xl font-semibold">00.00</span>
+                            </p>
+                        </div>
+
+                        <div id="couponDiv">
                             <label class="input input-bordered flex items-center">
                                 <input id="couponInput" type="text" class="grow" placeholder="Have any coupon?"
                                     disabled />
@@ -347,6 +357,7 @@
                                     disabled>Apply</button>
                             </label>
                         </div>
+
                         <div class="flex justify-between items-center">
                             <p class="text-lg font-bold">
                                 Grand Total
