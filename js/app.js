@@ -36,9 +36,13 @@ function off20Percent(value) {
 
 for (let seat of seats) {
     var clickValue = [];
+    var arrayValue = clickValue.length;
+
+
     seat.addEventListener("click", function (e) {
         var btnValue = e.target.innerText;
-        const arrayValue = clickValue.length;
+        var arrayValue = clickValue.length;
+
 
         if (clickValue.includes(btnValue)) {
             alert(`THE ${btnValue} SEATS IS ALREADY YOU BOOKING`);
@@ -49,8 +53,11 @@ for (let seat of seats) {
             decrement("totalSeat");
             seatList(btnValue);
             price();
+            nextBtn();
 
         }
+
+
 
         function seatList() {
             let ticketList = document.getElementById("ticketList");
@@ -93,15 +100,15 @@ for (let seat of seats) {
                     // console.log(couponBtn);
 
                     couponBtn.addEventListener("click", function () {
-                        let inputValue = couponInput.value;
-                        if (inputValue === "NEW15") {
+                        let couponValue = couponInput.value;
+                        if (couponValue === "NEW15") {
                             let discountPrice = off15Percent(total_price);
                             grandPrice.innerText = discountPrice[0];
                             discountValue.innerText = discountPrice[1];
                             couponDiv.classList.add("hidden");
                             discountDiv.classList.remove("hidden");
 
-                        } else if (inputValue === "Couple 20") {
+                        } else if (couponValue === "Couple 20") {
                             let discountPrice = off20Percent(total_price);
                             grandPrice.innerText = discountPrice[0];
                             discountValue.innerText = discountPrice[1];
@@ -116,7 +123,42 @@ for (let seat of seats) {
         };
 
 
+
+
     });
 
 
-}
+};
+
+const numberInput = document.getElementById("numberInput");
+
+numberInput.addEventListener("keyup", nextBtn)
+
+
+
+function nextBtn() {
+    const numberInput = document.getElementById("numberInput");
+    const nextBtn = document.getElementById("nextBtn");
+    const success = document.getElementById("success");
+    const seatCount = document.getElementById("seatCount").innerText;
+    let inputValue = numberInput.value.length;
+
+
+    // console.log(inputValue.length);
+
+
+    if (seatCount >= 1 && inputValue >= 1) {
+
+        nextBtn.removeAttribute("disabled");
+
+    } else if (inputValue < 1) {
+        nextBtn.setAttribute("disabled", true);
+    }
+
+
+    nextBtn.addEventListener("click", function () {
+        success.classList.remove("hidden");
+    })
+};
+
+
